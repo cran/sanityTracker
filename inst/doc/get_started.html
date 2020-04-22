@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+
+<title>Get started</title>
+
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    for (var j = 0; j < rules.length; j++) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+
+
+
+<style type="text/css">body {
+background-color: #fff;
+margin: 1em auto;
+max-width: 700px;
+overflow: visible;
+padding-left: 2em;
+padding-right: 2em;
+font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 14px;
+line-height: 1.35;
+}
+#TOC {
+clear: both;
+margin: 0 0 10px 10px;
+padding: 4px;
+width: 400px;
+border: 1px solid #CCCCCC;
+border-radius: 5px;
+background-color: #f6f6f6;
+font-size: 13px;
+line-height: 1.3;
+}
+#TOC .toctitle {
+font-weight: bold;
+font-size: 15px;
+margin-left: 5px;
+}
+#TOC ul {
+padding-left: 40px;
+margin-left: -1.5em;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+#TOC ul ul {
+margin-left: -2em;
+}
+#TOC li {
+line-height: 16px;
+}
+table {
+margin: 1em auto;
+border-width: 1px;
+border-color: #DDDDDD;
+border-style: outset;
+border-collapse: collapse;
+}
+table th {
+border-width: 2px;
+padding: 5px;
+border-style: inset;
+}
+table td {
+border-width: 1px;
+border-style: inset;
+line-height: 18px;
+padding: 5px 5px;
+}
+table, table th, table td {
+border-left-style: none;
+border-right-style: none;
+}
+table thead, table tr.even {
+background-color: #f7f7f7;
+}
+p {
+margin: 0.5em 0;
+}
+blockquote {
+background-color: #f6f6f6;
+padding: 0.25em 0.75em;
+}
+hr {
+border-style: solid;
+border: none;
+border-top: 1px solid #777;
+margin: 28px 0;
+}
+dl {
+margin-left: 0;
+}
+dl dd {
+margin-bottom: 13px;
+margin-left: 13px;
+}
+dl dt {
+font-weight: bold;
+}
+ul {
+margin-top: 0;
+}
+ul li {
+list-style: circle outside;
+}
+ul ul {
+margin-bottom: 0;
+}
+pre, code {
+background-color: #f7f7f7;
+border-radius: 3px;
+color: #333;
+white-space: pre-wrap; 
+}
+pre {
+border-radius: 3px;
+margin: 5px 0px 10px 0px;
+padding: 10px;
+}
+pre:not([class]) {
+background-color: #f7f7f7;
+}
+code {
+font-family: Consolas, Monaco, 'Courier New', monospace;
+font-size: 85%;
+}
+p > code, li > code {
+padding: 2px 0px;
+}
+div.figure {
+text-align: center;
+}
+img {
+background-color: #FFFFFF;
+padding: 2px;
+border: 1px solid #DDDDDD;
+border-radius: 3px;
+border: 1px solid #CCCCCC;
+margin: 0 5px;
+}
+h1 {
+margin-top: 0;
+font-size: 35px;
+line-height: 40px;
+}
+h2 {
+border-bottom: 4px solid #f7f7f7;
+padding-top: 10px;
+padding-bottom: 2px;
+font-size: 145%;
+}
+h3 {
+border-bottom: 2px solid #f7f7f7;
+padding-top: 10px;
+font-size: 120%;
+}
+h4 {
+border-bottom: 1px solid #f7f7f7;
+margin-left: 8px;
+font-size: 105%;
+}
+h5, h6 {
+border-bottom: 1px solid #ccc;
+font-size: 105%;
+}
+a {
+color: #0033dd;
+text-decoration: none;
+}
+a:hover {
+color: #6666ff; }
+a:visited {
+color: #800080; }
+a:visited:hover {
+color: #BB00BB; }
+a[href^="http:"] {
+text-decoration: underline; }
+a[href^="https:"] {
+text-decoration: underline; }
+
+code > span.kw { color: #555; font-weight: bold; } 
+code > span.dt { color: #902000; } 
+code > span.dv { color: #40a070; } 
+code > span.bn { color: #d14; } 
+code > span.fl { color: #d14; } 
+code > span.ch { color: #d14; } 
+code > span.st { color: #d14; } 
+code > span.co { color: #888888; font-style: italic; } 
+code > span.ot { color: #007020; } 
+code > span.al { color: #ff0000; font-weight: bold; } 
+code > span.fu { color: #900; font-weight: bold; } 
+code > span.er { color: #a61717; background-color: #e3d2d2; } 
+</style>
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+<h1 class="title toc-ignore">Get started</h1>
+
+
+
+<div id="core-functionality" class="section level1">
+<h1>Core functionality</h1>
+<p>The package is quite small and contains the core function <code>sanityTracker::add_sanity_check</code> and a few convenience functions (use the prefix <em>sc_</em>) that basically call <code>sanityTracker::add_sanity_check</code>. Some of the convenience functions like <code>sanityTracker::sc_left_join</code> perform more than one check, other can check multiple columns at the same time like <code>sanityTracker::sc_cols_non_NA</code>.</p>
+<p>The most helpful feature is that no matter how deep your sanity check is buried in your source code, <em>sanityTracker</em> will centralize the results AND if the defined check fails a few examples of the failed rows are stored for investigation.</p>
+<p>The functions are more or less self explanatory, therefore we focus on the stored results and examples.</p>
+<p>We start with a very simple check.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">library</span>(sanityTracker)</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2">sc &lt;-<span class="st"> </span>sanityTracker<span class="op">::</span><span class="kw">add_sanity_check</span>(</a>
+<a class="sourceLine" id="cb1-3" data-line-number="3">  <span class="dt">fail_vec =</span> mtcars<span class="op">$</span>mpg <span class="op">&gt;</span><span class="st"> </span><span class="dv">30</span>,</a>
+<a class="sourceLine" id="cb1-4" data-line-number="4">  <span class="dt">description =</span> <span class="st">&quot;mpg should be below 30&quot;</span></a>
+<a class="sourceLine" id="cb1-5" data-line-number="5">)</a>
+<a class="sourceLine" id="cb1-6" data-line-number="6"><span class="kw">get_sanity_checks</span>()</a>
+<a class="sourceLine" id="cb1-7" data-line-number="7"><span class="co">#&gt;               description additional_desc data_name  n n_fail n_na counter_meas</span></a>
+<a class="sourceLine" id="cb1-8" data-line-number="8"><span class="co">#&gt; 1: mpg should be below 30               -           32      4    0            -</span></a>
+<a class="sourceLine" id="cb1-9" data-line-number="9"><span class="co">#&gt;       fail_vec_str param_name                      call</span></a>
+<a class="sourceLine" id="cb1-10" data-line-number="10"><span class="co">#&gt; 1: mtcars$mpg &gt; 30          - eval(expr, envir, enclos)</span></a></code></pre></div>
+<p>We see that from the 32 observations contained in <em>mtcars</em> 4 observations have a mpg above 30. It also tracked how we actually performed the check in the column <em>fail_vec_str</em>. Usually, if failures happen, the next step is to actually investigate those cases. For this purpose that package offers the parameter <em>data</em>:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1">sc &lt;-<span class="st"> </span>sanityTracker<span class="op">::</span><span class="kw">add_sanity_check</span>(</a>
+<a class="sourceLine" id="cb2-2" data-line-number="2">  <span class="dt">fail_vec =</span> mtcars<span class="op">$</span>mpg <span class="op">&gt;</span><span class="st"> </span><span class="dv">30</span>,</a>
+<a class="sourceLine" id="cb2-3" data-line-number="3">  <span class="dt">description =</span> <span class="st">&quot;mpg should be below 30. extract example &quot;</span>,</a>
+<a class="sourceLine" id="cb2-4" data-line-number="4">  <span class="dt">data =</span> mtcars,</a>
+<a class="sourceLine" id="cb2-5" data-line-number="5">  <span class="dt">param_name =</span> <span class="st">&quot;mpg&quot;</span></a>
+<a class="sourceLine" id="cb2-6" data-line-number="6">)</a>
+<a class="sourceLine" id="cb2-7" data-line-number="7"><span class="kw">get_sanity_checks</span>()</a>
+<a class="sourceLine" id="cb2-8" data-line-number="8"><span class="co">#&gt;                                 description additional_desc data_name  n n_fail</span></a>
+<a class="sourceLine" id="cb2-9" data-line-number="9"><span class="co">#&gt; 1:                   mpg should be below 30               -           32      4</span></a>
+<a class="sourceLine" id="cb2-10" data-line-number="10"><span class="co">#&gt; 2: mpg should be below 30. extract example                -    mtcars 32      4</span></a>
+<a class="sourceLine" id="cb2-11" data-line-number="11"><span class="co">#&gt;    n_na counter_meas    fail_vec_str param_name                      call</span></a>
+<a class="sourceLine" id="cb2-12" data-line-number="12"><span class="co">#&gt; 1:    0            - mtcars$mpg &gt; 30          - eval(expr, envir, enclos)</span></a>
+<a class="sourceLine" id="cb2-13" data-line-number="13"><span class="co">#&gt; 2:    0            - mtcars$mpg &gt; 30        mpg eval(expr, envir, enclos)</span></a>
+<a class="sourceLine" id="cb2-14" data-line-number="14"><span class="co">#&gt;         example</span></a>
+<a class="sourceLine" id="cb2-15" data-line-number="15"><span class="co">#&gt; 1:             </span></a>
+<a class="sourceLine" id="cb2-16" data-line-number="16"><span class="co">#&gt; 2: &lt;data.frame&gt;</span></a></code></pre></div>
+<p>First note that we now see two lines where the first one is from our initial sanity check. Furthermore, the second line shows now that the column <em>example</em> is not empty:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw">get_sanity_checks</span>()[[<span class="st">&quot;example&quot;</span>]][[<span class="dv">2</span>]]</a>
+<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="co">#&gt;                 mpg cyl disp hp drat    wt  qsec vs am gear carb</span></a>
+<a class="sourceLine" id="cb3-3" data-line-number="3"><span class="co">#&gt; Fiat 128       32.4   4 78.7 66 4.08 2.200 19.47  1  1    4    1</span></a>
+<a class="sourceLine" id="cb3-4" data-line-number="4"><span class="co">#&gt; Honda Civic    30.4   4 75.7 52 4.93 1.615 18.52  1  1    4    2</span></a>
+<a class="sourceLine" id="cb3-5" data-line-number="5"><span class="co">#&gt; Toyota Corolla 33.9   4 71.1 65 4.22 1.835 19.90  1  1    4    1</span></a></code></pre></div>
+<p>If you call the sanity check from within a function, the results also appear in the global list of all sanity checks and the table shows the function call where the check happened.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1">g &lt;-<span class="st"> </span><span class="cf">function</span>(x) {</a>
+<a class="sourceLine" id="cb4-2" data-line-number="2">  sanityTracker<span class="op">::</span><span class="kw">add_sanity_check</span>(</a>
+<a class="sourceLine" id="cb4-3" data-line-number="3">    <span class="dt">fail_vec =</span> x<span class="op">$</span>mpg <span class="op">&gt;</span><span class="st"> </span><span class="dv">30</span>,</a>
+<a class="sourceLine" id="cb4-4" data-line-number="4">    <span class="dt">description =</span> <span class="st">&quot;mpg should be below 30. check in function&quot;</span>,</a>
+<a class="sourceLine" id="cb4-5" data-line-number="5">    <span class="dt">data =</span> x,</a>
+<a class="sourceLine" id="cb4-6" data-line-number="6">    <span class="dt">param_name =</span> <span class="st">&quot;mpg&quot;</span></a>
+<a class="sourceLine" id="cb4-7" data-line-number="7">  )</a>
+<a class="sourceLine" id="cb4-8" data-line-number="8">}</a>
+<a class="sourceLine" id="cb4-9" data-line-number="9">f &lt;-<span class="st"> </span><span class="cf">function</span>(x) {<span class="kw">g</span>(<span class="dt">x =</span> x)}</a>
+<a class="sourceLine" id="cb4-10" data-line-number="10">dummy &lt;-<span class="st"> </span><span class="kw">f</span>(<span class="dt">x =</span> mtcars)</a>
+<a class="sourceLine" id="cb4-11" data-line-number="11"><span class="kw">get_sanity_checks</span>()</a>
+<a class="sourceLine" id="cb4-12" data-line-number="12"><span class="co">#&gt;                                  description additional_desc data_name  n</span></a>
+<a class="sourceLine" id="cb4-13" data-line-number="13"><span class="co">#&gt; 1:                    mpg should be below 30               -           32</span></a>
+<a class="sourceLine" id="cb4-14" data-line-number="14"><span class="co">#&gt; 2:  mpg should be below 30. extract example                -    mtcars 32</span></a>
+<a class="sourceLine" id="cb4-15" data-line-number="15"><span class="co">#&gt; 3: mpg should be below 30. check in function               -         x 32</span></a>
+<a class="sourceLine" id="cb4-16" data-line-number="16"><span class="co">#&gt;    n_fail n_na counter_meas    fail_vec_str param_name</span></a>
+<a class="sourceLine" id="cb4-17" data-line-number="17"><span class="co">#&gt; 1:      4    0            - mtcars$mpg &gt; 30          -</span></a>
+<a class="sourceLine" id="cb4-18" data-line-number="18"><span class="co">#&gt; 2:      4    0            - mtcars$mpg &gt; 30        mpg</span></a>
+<a class="sourceLine" id="cb4-19" data-line-number="19"><span class="co">#&gt; 3:      4    0            -      x$mpg &gt; 30        mpg</span></a>
+<a class="sourceLine" id="cb4-20" data-line-number="20"><span class="co">#&gt;                         call      example</span></a>
+<a class="sourceLine" id="cb4-21" data-line-number="21"><span class="co">#&gt; 1: eval(expr, envir, enclos)             </span></a>
+<a class="sourceLine" id="cb4-22" data-line-number="22"><span class="co">#&gt; 2: eval(expr, envir, enclos) &lt;data.frame&gt;</span></a>
+<a class="sourceLine" id="cb4-23" data-line-number="23"><span class="co">#&gt; 3:                  g(x = x) &lt;data.frame&gt;</span></a></code></pre></div>
+<p>The function <code>sanityTracker::clear_sanity_checks</code> discards all sanity checks that are currently stored.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1">sanityTracker<span class="op">::</span><span class="kw">clear_sanity_checks</span>()</a>
+<a class="sourceLine" id="cb5-2" data-line-number="2">sanityTracker<span class="op">::</span><span class="kw">get_sanity_checks</span>()</a>
+<a class="sourceLine" id="cb5-3" data-line-number="3"><span class="co">#&gt; NULL</span></a></code></pre></div>
+</div>
+<div id="convenience-functions" class="section level1">
+<h1>Convenience functions</h1>
+<p>Doing all checks with <code>sanityTracker::add_sanity_check</code> would be cumbersome. Therefore, the package provides some convenience functions to perform some standard checks like whether columns <em>a, b, c, x, y, z</em> are positive or do they contain missing values or is their combination unique. All convenience functions start with the prefix <em>sc_</em>. These functions provide additional information about the check(s) that they perform in the column <em>additional_desc</em>. So checking that all columns of <em>mtcars</em> are positive is quite easy.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1">sc &lt;-<span class="st"> </span>sanityTracker<span class="op">::</span><span class="kw">sc_cols_positive</span>(</a>
+<a class="sourceLine" id="cb6-2" data-line-number="2">  <span class="dt">object =</span> mtcars,</a>
+<a class="sourceLine" id="cb6-3" data-line-number="3">  <span class="dt">cols =</span> <span class="kw">names</span>(mtcars),</a>
+<a class="sourceLine" id="cb6-4" data-line-number="4">  <span class="dt">description =</span> <span class="st">&quot;Exemplary sanity checks&quot;</span></a>
+<a class="sourceLine" id="cb6-5" data-line-number="5">)</a>
+<a class="sourceLine" id="cb6-6" data-line-number="6"><span class="kw">get_sanity_checks</span>()</a>
+<a class="sourceLine" id="cb6-7" data-line-number="7"><span class="co">#&gt;                 description                           additional_desc data_name</span></a>
+<a class="sourceLine" id="cb6-8" data-line-number="8"><span class="co">#&gt;  1: Exemplary sanity checks  Elements in 'mpg' should be in [0, Inf).    mtcars</span></a>
+<a class="sourceLine" id="cb6-9" data-line-number="9"><span class="co">#&gt;  2: Exemplary sanity checks  Elements in 'cyl' should be in [0, Inf).    mtcars</span></a>
+<a class="sourceLine" id="cb6-10" data-line-number="10"><span class="co">#&gt;  3: Exemplary sanity checks Elements in 'disp' should be in [0, Inf).    mtcars</span></a>
+<a class="sourceLine" id="cb6-11" data-line-number="11"><span class="co">#&gt;  4: Exemplary sanity checks   Elements in 'hp' should be in [0, Inf).    mtcars</span></a>
+<a class="sourceLine" id="cb6-12" data-line-number="12"><span class="co">#&gt;  5: Exemplary sanity checks Elements in 'drat' should be in [0, Inf).    mtcars</span></a>
+<a class="sourceLine" id="cb6-13" data-line-number="13"><span class="co">#&gt;  6: Exemplary sanity checks   Elements in 'wt' should be in [0, Inf).    mtcars</span></a>
+<a class="sourceLine" id="cb6-14" data-line-number="14"><span class="co">#&gt;  7: Exemplary sanity checks Elements in 'qsec' should be in [0, Inf).    mtcars</span></a>
+<a class="sourceLine" id="cb6-15" data-line-number="15"><span class="co">#&gt;  8: Exemplary sanity checks   Elements in 'vs' should be in [0, Inf).    mtcars</span></a>
+<a class="sourceLine" id="cb6-16" data-line-number="16"><span class="co">#&gt;  9: Exemplary sanity checks   Elements in 'am' should be in [0, Inf).    mtcars</span></a>
+<a class="sourceLine" id="cb6-17" data-line-number="17"><span class="co">#&gt; 10: Exemplary sanity checks Elements in 'gear' should be in [0, Inf).    mtcars</span></a>
+<a class="sourceLine" id="cb6-18" data-line-number="18"><span class="co">#&gt; 11: Exemplary sanity checks Elements in 'carb' should be in [0, Inf).    mtcars</span></a>
+<a class="sourceLine" id="cb6-19" data-line-number="19"><span class="co">#&gt;      n n_fail n_na counter_meas</span></a>
+<a class="sourceLine" id="cb6-20" data-line-number="20"><span class="co">#&gt;  1: 32      0    0            -</span></a>
+<a class="sourceLine" id="cb6-21" data-line-number="21"><span class="co">#&gt;  2: 32      0    0            -</span></a>
+<a class="sourceLine" id="cb6-22" data-line-number="22"><span class="co">#&gt;  3: 32      0    0            -</span></a>
+<a class="sourceLine" id="cb6-23" data-line-number="23"><span class="co">#&gt;  4: 32      0    0            -</span></a>
+<a class="sourceLine" id="cb6-24" data-line-number="24"><span class="co">#&gt;  5: 32      0    0            -</span></a>
+<a class="sourceLine" id="cb6-25" data-line-number="25"><span class="co">#&gt;  6: 32      0    0            -</span></a>
+<a class="sourceLine" id="cb6-26" data-line-number="26"><span class="co">#&gt;  7: 32      0    0            -</span></a>
+<a class="sourceLine" id="cb6-27" data-line-number="27"><span class="co">#&gt;  8: 32      0    0            -</span></a>
+<a class="sourceLine" id="cb6-28" data-line-number="28"><span class="co">#&gt;  9: 32      0    0            -</span></a>
+<a class="sourceLine" id="cb6-29" data-line-number="29"><span class="co">#&gt; 10: 32      0    0            -</span></a>
+<a class="sourceLine" id="cb6-30" data-line-number="30"><span class="co">#&gt; 11: 32      0    0            -</span></a>
+<a class="sourceLine" id="cb6-31" data-line-number="31"><span class="co">#&gt;                                                                  fail_vec_str</span></a>
+<a class="sourceLine" id="cb6-32" data-line-number="32"><span class="co">#&gt;  1: sapply(object[[col]], function(x) !checkmate::qtest(x = x, rules = rule))</span></a>
+<a class="sourceLine" id="cb6-33" data-line-number="33"><span class="co">#&gt;  2: sapply(object[[col]], function(x) !checkmate::qtest(x = x, rules = rule))</span></a>
+<a class="sourceLine" id="cb6-34" data-line-number="34"><span class="co">#&gt;  3: sapply(object[[col]], function(x) !checkmate::qtest(x = x, rules = rule))</span></a>
+<a class="sourceLine" id="cb6-35" data-line-number="35"><span class="co">#&gt;  4: sapply(object[[col]], function(x) !checkmate::qtest(x = x, rules = rule))</span></a>
+<a class="sourceLine" id="cb6-36" data-line-number="36"><span class="co">#&gt;  5: sapply(object[[col]], function(x) !checkmate::qtest(x = x, rules = rule))</span></a>
+<a class="sourceLine" id="cb6-37" data-line-number="37"><span class="co">#&gt;  6: sapply(object[[col]], function(x) !checkmate::qtest(x = x, rules = rule))</span></a>
+<a class="sourceLine" id="cb6-38" data-line-number="38"><span class="co">#&gt;  7: sapply(object[[col]], function(x) !checkmate::qtest(x = x, rules = rule))</span></a>
+<a class="sourceLine" id="cb6-39" data-line-number="39"><span class="co">#&gt;  8: sapply(object[[col]], function(x) !checkmate::qtest(x = x, rules = rule))</span></a>
+<a class="sourceLine" id="cb6-40" data-line-number="40"><span class="co">#&gt;  9: sapply(object[[col]], function(x) !checkmate::qtest(x = x, rules = rule))</span></a>
+<a class="sourceLine" id="cb6-41" data-line-number="41"><span class="co">#&gt; 10: sapply(object[[col]], function(x) !checkmate::qtest(x = x, rules = rule))</span></a>
+<a class="sourceLine" id="cb6-42" data-line-number="42"><span class="co">#&gt; 11: sapply(object[[col]], function(x) !checkmate::qtest(x = x, rules = rule))</span></a>
+<a class="sourceLine" id="cb6-43" data-line-number="43"><span class="co">#&gt;     param_name                      call</span></a>
+<a class="sourceLine" id="cb6-44" data-line-number="44"><span class="co">#&gt;  1:        mpg eval(expr, envir, enclos)</span></a>
+<a class="sourceLine" id="cb6-45" data-line-number="45"><span class="co">#&gt;  2:        cyl eval(expr, envir, enclos)</span></a>
+<a class="sourceLine" id="cb6-46" data-line-number="46"><span class="co">#&gt;  3:       disp eval(expr, envir, enclos)</span></a>
+<a class="sourceLine" id="cb6-47" data-line-number="47"><span class="co">#&gt;  4:         hp eval(expr, envir, enclos)</span></a>
+<a class="sourceLine" id="cb6-48" data-line-number="48"><span class="co">#&gt;  5:       drat eval(expr, envir, enclos)</span></a>
+<a class="sourceLine" id="cb6-49" data-line-number="49"><span class="co">#&gt;  6:         wt eval(expr, envir, enclos)</span></a>
+<a class="sourceLine" id="cb6-50" data-line-number="50"><span class="co">#&gt;  7:       qsec eval(expr, envir, enclos)</span></a>
+<a class="sourceLine" id="cb6-51" data-line-number="51"><span class="co">#&gt;  8:         vs eval(expr, envir, enclos)</span></a>
+<a class="sourceLine" id="cb6-52" data-line-number="52"><span class="co">#&gt;  9:         am eval(expr, envir, enclos)</span></a>
+<a class="sourceLine" id="cb6-53" data-line-number="53"><span class="co">#&gt; 10:       gear eval(expr, envir, enclos)</span></a>
+<a class="sourceLine" id="cb6-54" data-line-number="54"><span class="co">#&gt; 11:       carb eval(expr, envir, enclos)</span></a></code></pre></div>
+<p>Note that although the convenience functions do not explicitly list the parameter, <em>description</em>, <em>counter_meas</em>, <em>data_name</em>, <em>example_size</em>, <em>param_name</em>, <em>call</em> and <em>fail_callback</em> can be used via the ‘…’-argument.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="kw">clear_sanity_checks</span>()</a>
+<a class="sourceLine" id="cb7-2" data-line-number="2">sc &lt;-<span class="st"> </span>sanityTracker<span class="op">::</span><span class="kw">sc_col_elements</span>(</a>
+<a class="sourceLine" id="cb7-3" data-line-number="3">  <span class="dt">object =</span> mtcars,</a>
+<a class="sourceLine" id="cb7-4" data-line-number="4">  <span class="dt">col =</span> <span class="st">&quot;carb&quot;</span>,</a>
+<a class="sourceLine" id="cb7-5" data-line-number="5">  <span class="dt">feasible_elements =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">4</span>,</a>
+<a class="sourceLine" id="cb7-6" data-line-number="6">  <span class="dt">description =</span> <span class="st">&quot;Only usual number of carburetors&quot;</span>,</a>
+<a class="sourceLine" id="cb7-7" data-line-number="7">  <span class="dt">fail_callback =</span> warning,</a>
+<a class="sourceLine" id="cb7-8" data-line-number="8">  <span class="dt">call =</span> <span class="st">&quot;directly from vignette&quot;</span></a>
+<a class="sourceLine" id="cb7-9" data-line-number="9">)</a>
+<a class="sourceLine" id="cb7-10" data-line-number="10"><span class="co">#&gt; Warning in (function (fail_vec, description, counter_meas, data, data_name, :</span></a>
+<a class="sourceLine" id="cb7-11" data-line-number="11"><span class="co">#&gt; Only usual number of carburetors/Elements in 'carb' should contain only '1',</span></a>
+<a class="sourceLine" id="cb7-12" data-line-number="12"><span class="co">#&gt; '2', '3', '4'.: FAILED</span></a>
+<a class="sourceLine" id="cb7-13" data-line-number="13"><span class="kw">get_sanity_checks</span>()</a>
+<a class="sourceLine" id="cb7-14" data-line-number="14"><span class="co">#&gt;                         description</span></a>
+<a class="sourceLine" id="cb7-15" data-line-number="15"><span class="co">#&gt; 1: Only usual number of carburetors</span></a>
+<a class="sourceLine" id="cb7-16" data-line-number="16"><span class="co">#&gt;                                               additional_desc data_name  n</span></a>
+<a class="sourceLine" id="cb7-17" data-line-number="17"><span class="co">#&gt; 1: Elements in 'carb' should contain only '1', '2', '3', '4'.    mtcars 32</span></a>
+<a class="sourceLine" id="cb7-18" data-line-number="18"><span class="co">#&gt;    n_fail n_na counter_meas                            fail_vec_str param_name</span></a>
+<a class="sourceLine" id="cb7-19" data-line-number="19"><span class="co">#&gt; 1:      2    0            - !(object[[col]] %in% feasible_elements)       carb</span></a>
+<a class="sourceLine" id="cb7-20" data-line-number="20"><span class="co">#&gt;                      call      example</span></a>
+<a class="sourceLine" id="cb7-21" data-line-number="21"><span class="co">#&gt; 1: directly from vignette &lt;data.frame&gt;</span></a></code></pre></div>
+</div>
+
+
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
